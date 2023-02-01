@@ -1,0 +1,486 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" >
+        <img
+          src="../../../../assets/logoNew.png"
+          height="40"
+          alt="MDB Logo"
+          loading="lazy"
+        />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbarItems">
+        <li class="nav-item">
+          <a class="nav-link" ><button class="navbarButton">Home</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" ><button class="navbarButton">About</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  style=""><button class="navbarButton">Assessment</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" ><button class="navbarButton">Analysis</button></a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+
+
+
+
+      <button type="button" class="btn btn-link px-3 me-2" style="text-decoration: none; color: black; font-weight: 400;">
+        Login
+      </button>
+      <button type="button" class="btn btn-primary me-3" style="background: #003153; border: 1px solid #003153; font-size: .93rem; border-radius: 6px;">
+        Sign up for free
+      </button>
+      <!-- Avatar -->
+      <a
+        class="dropdown-toggle d-flex align-items-center hidden-arrow"
+
+        id="navbarDropdownMenuLink"
+        role="button"
+        data-mdb-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img
+          src="../../../../assets/user4.png"
+          class="rounded-circle"
+          height="25"
+          alt="Black and White Portrait of a Man"
+          loading="lazy"
+        />
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+        <li>
+          <a class="dropdown-item" >My profile</a>
+        </li>
+        <li>
+          <a class="dropdown-item" >Settings</a>
+        </li>
+        <li>
+          <a class="dropdown-item" >Logout</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+
+<div class="assessmentPage">
+  <table class="table table mt-5 assessmentTable" style="width: 90%; margin: auto;text-align: center;">
+    <thead>
+      <tr>
+        <th></th>
+        <th scope="col" colspan="2">BAND</th>
+        <th scope="col">0</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th class="blocks" rowspan="9" ><span>Process</span></th>
+        <td class="pillars" rowspan="3">OPERATIONS</td>
+        <td class="dimensions" rowspan="3">Vertical Integration</td>
+        <td colspan="6" class="dimensionDescription" ></td>
+      </tr>
+      <tr class="barChart" data-toggle="popover" data-trigger="hover" title="Popover in Table Demo"  data-content="Popover in row number 1">
+        <td [attr.colspan]="organisationValues.collaboration" class="bandValueDescription">
+          <!-- <div style="float: right;">1</div> -->
+          <!-- <button type="button" class="btn btn-outline-secondary mr-2" placement="top"
+          ngbTooltip="Your Results: 2.3" style="border: none; background: none;">
+            Tooltip on top
+          </button> -->
+        </td>
+      </tr>
+      <tr>
+      </tr>
+
+      <tr>
+        <td class="pillars" rowspan="3">SUPPLY CHAIN</td>
+        <td class="dimensions" rowspan="3">Horizontal Integration</td>
+        <td colspan="6" class="dimensionDescription" ></td>
+      </tr>
+      <tr class="barChart">
+        <td [attr.colspan]="organisationValues.strategyAndGoverance" class="bandValueDescription">
+          <!-- <div style="float: right;">1</div> -->
+          <!-- <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+
+          </div>
+         </div> -->
+        </td>
+      </tr>
+      <tr>
+
+      </tr>
+
+
+      <tr>
+        <td class="pillars" rowspan="3">PRODUCT LIFECYCLE</td>
+        <td class="dimensions" rowspan="3">Integrated Product Lifecycle</td>
+        <td colspan="6" class="dimensionDescription" ></td>
+      </tr>
+      <tr class="barChart" placement="top" ngbPopover="Your Results: 1" popoverTitle="Inter & Intra-Company Collaboration">
+        <td [attr.colspan]="organisationValues.leadershipCompetency" class="bandValueDescription" >
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+      </tr>
+
+
+      <tbody>
+
+        <tr>
+          <th class="blocks" rowspan="27" ><span>Technology</span></th>
+          <td class="pillars" rowspan="9">AUTOMATION</td>
+          <td class="dimensions" rowspan="3">Shop Floor Automation</td>
+          <td colspan="6" class="dimensionDescription" ></td>
+        </tr>
+        <tr>
+          <td colspan="6" class="bandValueDescription">
+            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+
+            </div>
+           </div>
+          </td>
+        </tr>
+        <tr>
+
+        </tr>
+
+
+
+        <tr>
+          <td class="dimensions" rowspan="3">Enterprise Automation</td>
+          <td colspan="6" class="dimensionDescription" ></td>
+        </tr>
+        <tr>
+          <td colspan="6" class="bandValueDescription">
+            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+
+            </div>
+           </div>
+          </td>
+        </tr>
+        <tr>
+
+
+        </tr>
+
+
+        <tr>
+          <td class="dimensions" rowspan="3">Facility Automation</td>
+          <td colspan="6" class="dimensionDescription" ></td>
+        </tr>
+        <tr>
+          <td colspan="6" class="bandValueDescription">
+            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+
+            </div>
+           </div>
+          </td>
+        </tr>
+        <tr>
+
+        </tr>
+
+
+
+        <tr>
+          <td class="pillars" rowspan="9">CONNECTIVITY</td>
+          <td class="dimensions" rowspan="3">Shop Floor Connectivity</td>
+          <td colspan="6" class="dimensionDescription" ></td>
+        </tr>
+        <tr>
+          <td colspan="6" class="bandValueDescription">
+            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+
+            </div>
+           </div>
+          </td>
+        </tr>
+        <tr>
+
+        </tr>
+
+
+
+        <tr>
+          <td class="dimensions" rowspan="3">Enterprise Connectivity</td>
+          <td colspan="6" class="dimensionDescription" ></td>
+        </tr>
+        <tr>
+          <td colspan="6" class="bandValueDescription">
+            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+
+            </div>
+           </div>
+          </td>
+        </tr>
+        <tr>
+
+        </tr>
+
+
+        <tr>
+          <td class="dimensions" rowspan="3">Facility Connectivity</td>
+          <td colspan="6" class="dimensionDescription" ></td>
+        </tr>
+        <tr>
+          <td colspan="6" class="bandValueDescription">
+            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+
+            </div>
+           </div>
+          </td>
+        </tr>
+        <tr>
+
+        </tr>
+
+
+        <tr>
+          <td class="pillars" rowspan="9">INTELLIGENCE</td>
+          <td class="dimensions" rowspan="3">Shop Floor Intelligence</td>
+          <td colspan="6" class="dimensionDescription" ></td>
+        </tr>
+        <tr>
+          <td colspan="6" class="bandValueDescription">
+            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+
+            </div>
+           </div>
+          </td>
+        </tr>
+        <tr>
+
+        </tr>
+
+        <tr>
+          <td class="dimensions" rowspan="3">Enterprise Intelligence</td>
+          <td colspan="6" class="dimensionDescription" ></td>
+        </tr>
+        <tr>
+          <td colspan="6" class="bandValueDescription">
+            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+
+            </div>
+           </div>
+          </td>
+        </tr>
+        <tr>
+
+        </tr>
+
+        <tr>
+          <td class="dimensions" rowspan="3">Facility Intelligence</td>
+          <td colspan="6" class="dimensionDescription" ></td>
+        </tr>
+        <tr>
+          <td colspan="6" class="bandValueDescription">
+            <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+
+            </div>
+           </div>
+          </td>
+        </tr>
+        <tr>
+
+        </tr>
+        </tbody>
+
+
+
+
+
+
+
+
+
+
+    <tbody>
+      <tr>
+        <th class="blocks" rowspan="12" ><span>Organisation</span></th>
+        <td class="pillars" rowspan="6">TALENT READINESS</td>
+        <td class="dimensions" rowspan="3">Workforce Learning & Development</td>
+        <td colspan="6" class="dimensionDescription" ></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <!-- <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getworkForceDevelopment(i)">
+              {{ i }}
+            </button> -->
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+
+      </tr>
+
+      <tr>
+        <td class="dimensions" rowspan="3">Leadership Competency</td>
+        <td colspan="6" class="dimensionDescription" ></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <!-- <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getleadershipCompetency(i)">
+              {{ i }}
+            </button> -->
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+
+      </tr>
+
+
+
+      <tr>
+        <td class="pillars" rowspan="6">STRUCTURE & MANAGEMENT</td>
+        <td class="dimensions" rowspan="3">Inter- & Intra-Company Collaboration</td>
+        <td colspan="6" class="dimensionDescription" ></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <!-- <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getcollaboration(i)">
+              {{ i }}
+            </button> -->
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+
+      </tr>
+
+      <tr>
+
+        <td class="dimensions" rowspan="3">Strategy & Governance</td>
+        <td colspan="6" class="dimensionDescription" ></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <!-- <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getstrategyAndGoverance(i)">
+              {{ i }}
+            </button> -->
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" >
+
+        </td>
+      </tr>
+
+
+
+    </tbody>
+  </table>
+
+  <!-- <p>trial works!</p> -->
+  <table class="table table mt-5 assessmentTable" style="width: 90%; margin: auto;text-align: center;">>
+
+</table>
+
+</div>
+
+
+
+
+<!-- <button data-toggle="tooltip" data-placement="right" title="Tooltip on right">click</button>
+
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+  Tooltip on right
+</button> -->
+
+<button type="button" class="btn btn-outline-secondary mr-2" placement="top"
+ngbTooltip="Your Results: 2.3 ">
+  Tooltip on top
+</button>
+
+<button type="button" class="btn btn-outline-secondary mr-2" placement="right" ngbTooltip="Tooltip on right">
+  Tooltip on right
+</button>
+
+<button type="button" class="btn btn-outline-secondary mr-2" placement="bottom" ngbTooltip="Tooltip on bottom">
+  Tooltip on bottom
+</button>
+
+<button type="button" class="btn btn-outline-secondary mr-2" placement="left" ngbTooltip="Tooltip on left">
+  Tooltip on left
+</button>
+
+
+<button type="button" class="btn btn-outline-secondary mr-2" placement="top"
+        ngbPopover="This is simple example form ItSolutionStuff.com" popoverTitle="Popover on top">
+  Popover on top
+</button>
+
+<button type="button" class="btn btn-outline-secondary mr-2" placement="right"
+        ngbPopover="This is simple example form ItSolutionStuff.com" popoverTitle="Popover on right">
+  Popover on right
+</button>
+
+<button type="button" class="btn btn-outline-secondary mr-2" placement="bottom"
+        ngbPopover="This is simple example form ItSolutionStuff.com" popoverTitle="Popover on bottom">
+  Popover on bottom
+</button>
+
+<button type="button" class="btn btn-outline-secondary mr-2" placement="left"
+        ngbPopover="Your Results: 1.0 Best" popoverTitle="Popover on left">
+  Popover on left
+</button>

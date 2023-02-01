@@ -1,0 +1,265 @@
+
+  <h1>Hello</h1>
+
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <img
+          src="../../../../assets/logoNew.png"
+          height="40"
+          alt="MDB Logo"
+          loading="lazy"
+        />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbarItems">
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="">Assessment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Analysis</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+
+
+
+
+      <button type="button" class="btn btn-link px-3 me-2" style="text-decoration: none; color: black; font-weight: 400;">
+        Login
+      </button>
+      <button type="button" class="btn btn-primary me-3" style="background: #003153; border: 1px solid #003153; font-size: .93rem; border-radius: 6px;">
+        Sign up for free
+      </button>
+      <!-- Avatar -->
+      <a
+        class="dropdown-toggle d-flex align-items-center hidden-arrow"
+        href="#"
+        id="navbarDropdownMenuLink"
+        role="button"
+        data-mdb-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img
+          src="../../../../assets/user4.png"
+          class="rounded-circle"
+          height="25"
+          alt="Black and White Portrait of a Man"
+          loading="lazy"
+        />
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+        <li>
+          <a class="dropdown-item" href="#">My profile</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Settings</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Logout</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+<table class="table table mt-5 assessmentTable" style="width: 90%; margin: auto;text-align: center;">
+  <thead>
+    <tr>
+      <th></th>
+      <th scope="col" colspan="2">BAND</th>
+      <th scope="col">0</th>
+      <th scope="col">1</th>
+      <th scope="col">2</th>
+      <th scope="col">3</th>
+      <th scope="col">4</th>
+      <th scope="col">5</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th class="blocks" rowspan="9" ><span>Process</span></th>
+      <td class="pillars" rowspan="3">OPERATIONS</td>
+      <td class="dimensions" rowspan="3">Vertical Integration</td>
+      <td colspan="6" class="dimensionDescription" ><span>Vertical Integration is the integration of processes and systems across all hierarchical levels of the automation pyramid within a facility to establish a connected, end-to-end data thread.</span></td>
+    </tr>
+    <tr>
+      <td colspan="6" class="bandValueDescription">
+        <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+          <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getRate(i)">
+            {{ i }}
+          </button>
+          <!-- <button class="dimensionBandValue" (click)="getVerticalIntBandValue($event, bandTierOne)"
+          [ngClass]="{'green' : toggle, 'red': !toggle}">
+            {{ bandTierOne }}
+          </button>
+          <button class="dimensionBandValue" (click)="getVerticalIntBandValue($event, bandTierTwo)">
+            {{ bandTierTwo }}
+          </button>
+          <button class="dimensionBandValue" (click)="getVerticalIntBandValue($event, bandTierThree)">
+            {{ bandTierThree }}
+          </button>
+          <button class="dimensionBandValue" (click)="getVerticalIntBandValue($event, bandTierFour)">
+            {{ bandTierFour }}
+          </button>
+          <button class="dimensionBandValue" (click)="getVerticalIntBandValue($event, bandTierFive)">
+            {{ bandTierFive }}
+          </button> -->
+        </div>
+       </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="6" *ngIf="verticalIntegrationDisplay" class="valueDescriptionBox">
+        <span class="bandValueSelected">{{bandValue[bandValueSelectedForVerticalInt]}}</span>
+        {{ verticalIntegration[verticalIntegrationValue] }}
+        <!-- <div class="alert alert-success" role="alert">
+        </div> -->
+      </td>
+    </tr>
+
+    <tr>
+      <td class="pillars" rowspan="3">SUPPLY CHAIN</td>
+      <td class="dimensions" rowspan="3">Horizontal Integration</td>
+      <td colspan="6" class="dimensionDescription" ><span>Horizontal Integration is the integration of enterprise processes across the organization and with stakeholders along the value chain.</span></td>
+    </tr>
+    <tr>
+      <td colspan="6" class="bandValueDescription">
+        <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+          <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getHorizontalRate(i)">
+            {{ i }}
+          </button>
+        </div>
+       </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="6" *ngIf="horizontalIntegrationDisplay" class="valueDescriptionBox">
+        <span class="bandValueSelected">{{bandValue[bandValueSelectedForHorizontalInt]}}</span>
+        {{ horizontalIntegration[horizontalIntegrationValue] }}
+        <!-- <div class="alert alert-success" role="alert">
+        </div> -->
+      </td>
+    </tr>
+
+
+    <tr>
+      <td class="pillars" rowspan="3">PRODUCT LIFECYCLE</td>
+      <td class="dimensions" rowspan="3">Integrated Product Lifecycle</td>
+      <td colspan="6" class="dimensionDescription" ><span>Integrated Product Cycle is the integration of people, processes and systems along the entire product lifecycle, encompassing the stages of design and development, engineering, production, customer use, service, and disposal.</span></td>
+    </tr>
+    <tr>
+      <td colspan="6" class="bandValueDescription">
+        <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+          <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getProductLifeCycleRate(i)">
+            {{ i }}
+          </button>
+        </div>
+       </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="6" *ngIf="ProductLifeCycleDisplay" class="valueDescriptionBox">
+        <span class="bandValueSelected">{{bandValue[bandValueSelectedForProductLifecycle]}}</span>
+        {{ ProductLifeCycle[ProductLifeCycleValue] }}
+        <!-- <div class="alert alert-success" role="alert">
+        </div> -->
+      </td>
+    </tr>
+
+
+    <!-- <tr style="align-items: center">
+      <td></td>
+      <td></td>
+      <td><div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+        <label class="custom-control-label" for="customSwitch1"></label>
+      </div>
+        </td>
+    </tr> -->
+
+
+
+
+      <!-- <td></td>
+      <td></td>
+      <td><div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+        <label class="custom-control-label" for="customSwitch1"></label>
+      </div>
+        </td> -->
+    <!-- Default checked -->
+
+
+
+
+    <!-- <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr> -->
+  </tbody>
+</table>
+
+
+<button type="button" class="btn btn-outline-info nextPageBtn">Next -></button>
+
+
+
+<!--
+<button
+    (click)="enableDisableRule()"
+    [ngClass]="{'green' : toggle, 'red': !toggle}">
+    {{status}}
+</button> -->
+
+<!-- <button class="js-click" appColorDir (click)="test()">Click me!</button> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+

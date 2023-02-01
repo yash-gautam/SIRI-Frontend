@@ -1,0 +1,264 @@
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img
+            src="../../../../assets/logoNew.png"
+            height="40"
+            alt="MDB Logo"
+            loading="lazy"
+          />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbarItems">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="">Assessment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Analysis</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+
+
+
+
+        <button type="button" class="btn btn-link px-3 me-2" style="text-decoration: none; color: black; font-weight: 400;">
+          Login
+        </button>
+        <button type="button" class="btn btn-primary me-3" style="background: #003153; border: 1px solid #003153; font-size: .93rem; border-radius: 6px;">
+          Sign up for free
+        </button>
+        <!-- Avatar -->
+        <a
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src="../../../../assets/user4.png"
+            class="rounded-circle"
+            height="25"
+            alt="Black and White Portrait of a Man"
+            loading="lazy"
+          />
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+          <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+
+
+  <table class="table table mt-5 assessmentTable" style="width: 90%; margin: auto;text-align: center;">
+    <thead>
+      <tr>
+        <th></th>
+        <th scope="col" colspan="2">BAND</th>
+        <th scope="col">0</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th class="blocks" rowspan="12" ><span>Organisation</span></th>
+        <td class="pillars" rowspan="6">TALENT READINESS</td>
+        <td class="dimensions" rowspan="3">Workforce Learning & Development</td>
+        <td colspan="6" class="dimensionDescription" ><span>Workforce Learning & Development (L&D) is a system of processes and programmes that aims to develop the workforce’s capabilities, skills and competencies to achieve organizational excellence.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getworkForceDevelopment(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="workForceDevelopmentDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForWorkforceLearning]}}</span>
+          {{ workForceDevelopment[workForceDevelopmentValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+      <tr>
+        <td class="dimensions" rowspan="3">Leadership Competency</td>
+        <td colspan="6" class="dimensionDescription" ><span>Leadership Competency refers to the readiness of the management core to leverage the latest trends and technologies for the continued relevance and competitiveness of the organization.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getleadershipCompetency(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="leadershipCompetencyDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForLeadershipCompetency]}}</span>
+          {{ leadershipCompetency[leadershipCompetencyValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class="pillars" rowspan="6">STRUCTURE & MANAGEMENT</td>
+        <td class="dimensions" rowspan="3">Inter- & Intra-Company Collaboration</td>
+        <td colspan="6" class="dimensionDescription" ><span>Inter- & intra-company collaboration is the process of working together, through cross-functional teams and with external partners, to achieve a shared vision and purpose.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getcollaboration(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="collaborationDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForCompanyCollaboration]}}</span>
+          {{ collaboration[collaborationValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+      <tr>
+
+        <td class="dimensions" rowspan="3">Strategy & Governance</td>
+        <td colspan="6" class="dimensionDescription" ><span>Strategy & governance is the design and execution of a plan of action to achieve a set of long-term goals. It includes identifying priorities, formulating a roadmap, and developing a system of rules, practices and processes to translate a vision into business value.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getstrategyAndGoverance(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="strategyAndGoveranceDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForStrategyGovernance]}}</span>
+          {{ strategyAndGoverance[strategyAndGoveranceValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+
+
+      <!-- <tr style="align-items: center">
+        <td></td>
+        <td></td>
+        <td><div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+          <label class="custom-control-label" for="customSwitch1"></label>
+        </div>
+          </td>
+      </tr> -->
+
+
+
+
+        <!-- <td></td>
+        <td></td>
+        <td><div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+          <label class="custom-control-label" for="customSwitch1"></label>
+        </div>
+          </td> -->
+      <!-- Default checked -->
+
+
+
+
+      <!-- <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr> -->
+    </tbody>
+  </table>
+
+  <button type="button" class="btn nextPageBtn" (click)="saveOrganisation()" *ngIf="showNextTableBtn"
+  routerLink="/graph">Next -></button>
+
+
+  <!-- <button (click)="test($event)">click</button> -->
+
+
+
+
+
+
+
+
+
+
+
+
+

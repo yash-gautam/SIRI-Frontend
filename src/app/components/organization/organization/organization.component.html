@@ -1,0 +1,390 @@
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img
+            src="../../../../assets/logoNew.png"
+            height="40"
+            alt="MDB Logo"
+            loading="lazy"
+          />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbarItems">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="">Assessment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Analysis</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+
+
+
+
+        <button type="button" class="btn btn-link px-3 me-2" style="text-decoration: none; color: black; font-weight: 400;">
+          Login
+        </button>
+        <button type="button" class="btn btn-primary me-3" style="background: #003153; border: 1px solid #003153; font-size: .93rem; border-radius: 6px;">
+          Sign up for free
+        </button>
+        <!-- Avatar -->
+        <a
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src="../../../../assets/user4.png"
+            class="rounded-circle"
+            height="25"
+            alt="Black and White Portrait of a Man"
+            loading="lazy"
+          />
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+          <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+
+
+  <table class="table table mt-5 assessmentTable" style="width: 90%; margin: auto;text-align: center;">
+    <thead>
+      <tr>
+        <th></th>
+        <th scope="col" colspan="2">BAND</th>
+        <th scope="col">0</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+        <th scope="col">3</th>
+        <th scope="col">4</th>
+        <th scope="col">5</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th class="blocks" rowspan="27" ><span>Technology</span></th>
+        <td class="pillars" rowspan="9">AUTOMATION</td>
+        <td class="dimensions" rowspan="3">Shop Floor Automation</td>
+        <td colspan="6" class="dimensionDescription" ><span>Shop Floor Automation is the application of technology to monitor, control and execute the production and delivery of products and services, within the location where the production and management of goods is carried out.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getShopFloorAutomationRate(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="shopFloorAutomationDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForShopFloorAutomation]}}</span>
+          {{ shopFloorAutomation[shopFloorAutomationValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class="dimensions" rowspan="3">Enterprise Automation</td>
+        <td colspan="6" class="dimensionDescription" ><span>Enterprise Automation is the application of technology to monitor, control and execute processes, within the location where the administrative work is carried out. These processes include, but are not limited to, sales and marketing, demand planning, procurement, and human resource management and planning.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getEnterpriseAutomationRate(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="enterpriseAutomationDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForEnterpriseAutomation]}}</span>
+          {{ enterpriseAutomation[enterpriseAutomationValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="dimensions" rowspan="3">Facility Automation</td>
+        <td colspan="6" class="dimensionDescription" ><span>Facility Automation is the application of technology to monitor, control and execute processes within the physical building and/or premises where the production area is located. These processes include but are not limited to the management of HVAC, chiller, security, and lighting systems.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getFacilityAutomationRate(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="facilityAutomationDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForFacilityAutomation]}}</span>
+          {{ facilityAutomation[facilityAutomationValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class="pillars" rowspan="9">CONNECTIVITY</td>
+        <td class="dimensions" rowspan="3">Shop Floor Connectivity</td>
+        <td colspan="6" class="dimensionDescription" ><span>Shop Floor Connectivity is the interconnection of equipment, machines and computer-based systems, to enable communication and seamless data exchange, within the location where the production and management of goods is carried out.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getShopFloorConnectivityRate(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="shopFloorConnectivityDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForShopFloorConnectivity]}}</span>
+          {{ shopFloorConnectivity[shopFloorAutomationValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td class="dimensions" rowspan="3">Enterprise Connectivity</td>
+        <td colspan="6" class="dimensionDescription" ><span>Enterprise Connectivity is the interconnection of equipment, machines and computer-based systems, to enable communication and seamless data exchange, within the location where the administrative work is carried out.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getEnterpriseConnectivityRate(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="enterpriseConnectivityDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForEnterpriseConnectivity]}}</span>
+          {{ enterpriseConnectivity[enterpriseConnectivityValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="dimensions" rowspan="3">Facility Connectivity</td>
+        <td colspan="6" class="dimensionDescription" ><span>Facility Connectivity is the interconnection of equipment, machines and computer-based systems, to enable communication and seamless data exchange, within the physical building and/or land plot where the production area is located.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getFacilityConnectivityRate(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="facilityConnectivityDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForFacilityConnectivity]}}</span>
+          {{ facilityConnectivity[facilityConnectivityValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+
+      <tr>
+        <td class="pillars" rowspan="9">INTELLIGENCE</td>
+        <td class="dimensions" rowspan="3">Shop Floor Intelligence</td>
+        <td colspan="6" class="dimensionDescription" ><span>Shop Floor Intelligence is the processing & analysis of data to optimize existing processes and create new applications, products, and services, within the location where the production and management of goods is carried out.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getShopFloorIntelligenceRate(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="shopFloorIntelligenceDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForShopFloorIntelligence]}}</span>
+          {{ shopFloorIntelligence[shopFloorIntelligenceValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+      <tr>
+        <td class="dimensions" rowspan="3">Enterprise Intelligence</td>
+        <td colspan="6" class="dimensionDescription" ><span>Enterprise Intelligence is the processing & analysis of data to optimize existing administrative processes and create new applications, products and services.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getEnterpriseIntelligenceRate(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="enterpriseIntelligenceDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForEnterpriseIntelligence]}}</span>
+          {{ enterpriseIntelligence[enterpriseIntelligenceValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+      <tr>
+        <td class="dimensions" rowspan="3">Facility Intelligence</td>
+        <td colspan="6" class="dimensionDescription" ><span>Facility Intelligence is the processing & analysis of data to optimize existing processes and create new applications, products and services, within the physical building and premises where the production area is located at.</span></td>
+      </tr>
+      <tr>
+        <td colspan="6" class="bandValueDescription">
+          <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2" role="group" aria-label="First group" style="width: 100%;">
+            <button class="dimensionBandValue" *ngFor="let i of rating" (click)="getFacilityIntelligenceRate(i)">
+              {{ i }}
+            </button>
+          </div>
+         </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" *ngIf="facilityIntelligenceDisplay" class="valueDescriptionBox">
+          <span class="bandValueSelected">{{bandValue[bandValueSelectedForFacilityIntelligence]}}</span>
+          {{ facilityIntelligence[facilityIntelligenceValue] }}
+          <!-- <div class="alert alert-success" role="alert">
+          </div> -->
+        </td>
+      </tr>
+
+
+      <!-- <tr style="align-items: center">
+        <td></td>
+        <td></td>
+        <td><div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+          <label class="custom-control-label" for="customSwitch1"></label>
+        </div>
+          </td>
+      </tr> -->
+
+
+
+
+        <!-- <td></td>
+        <td></td>
+        <td><div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+          <label class="custom-control-label" for="customSwitch1"></label>
+        </div>
+          </td> -->
+      <!-- Default checked -->
+
+
+
+
+      <!-- <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr> -->
+    </tbody>
+  </table>
+
+  <button type="button" class="btn  nextPageBtn" (click)="saveTechnology()" *ngIf="showNextTableBtn" routerLink="/technology">Next -></button>
+
+
+  <!-- <button class="js-click" appColorDir (click)="test()">Click me!</button> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
